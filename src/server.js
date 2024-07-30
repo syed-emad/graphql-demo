@@ -5,7 +5,10 @@ var { ruruHTML } = require("ruru/server");
 var app = express();
 var schema = require("./schemas/index");
 var rootResolver = require("./resolvers/index");
+const { connectToMongo } = require("./database");
+require("dotenv").config();
 
+connectToMongo();
 const root = {
   books() {
     return "Hello World";
