@@ -7,11 +7,15 @@ const schema = buildSchema(`
         author: String
         price: Float!
     }
-    type RootQuery {
+
+    type BookInput {
+        title: String
+        author: String
+        price: Float
+    }
+
+    type Query {
         books:[Book!]!
     }
-    schema{
-    query: RootQuery
-    }
-    `);
+  `);
 module.exports = schema;

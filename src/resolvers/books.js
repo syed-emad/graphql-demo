@@ -10,5 +10,6 @@ const books = {
       throw err;
     }
   },
+  createBook: async (args, req) => {},
 };
 module.exports = books;
