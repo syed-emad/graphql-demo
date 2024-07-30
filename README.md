@@ -71,12 +71,12 @@ query {
 
 ```
 mutation{
-updateBook(book:{title:"111"},id:"66a93afb281cea5e59ddc1d8"){
-  _id
-  title
-  author
-  price
-} 
+ updateBook(book:{title:"111"},id:"66a93afb281cea5e59ddc1d8"){
+   _id
+   title
+   author
+   price
+ } 
 }
 ```
 
@@ -84,7 +84,6 @@ updateBook(book:{title:"111"},id:"66a93afb281cea5e59ddc1d8"){
 
 ```
 mutation{
-
   deleteBook(id:"66a93afb281cea5e59ddc1d8"){
     deletedBook{
       _id
