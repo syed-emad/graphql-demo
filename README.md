@@ -67,7 +67,7 @@ query {
 }
 ```
 
-###### Update Bookmutation
+###### Update Book 
 
 ```
 mutation{
@@ -80,7 +80,7 @@ updateBook(book:{title:"111"},id:"66a93afb281cea5e59ddc1d8"){
 }
 ```
 
-###### Delete Book`mutation{
+###### Delete Book 
 
 ```
 mutation{
