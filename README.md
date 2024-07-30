@@ -1,15 +1,16 @@
 # Graphql-demo
 
+### Server Architecture
+
+![1722374634670](image/README/1722374634670.png)
+
 ### Technologies Used:
 
 * NodeJS
 * GraphQl
 * Express
 * MongoDb
-
-### Server Architecture
-
-![1722374634670](image/README/1722374634670.png)
+* Ruru(GraphiQl with added features)
 
 ### Setup Guide
 
