@@ -42,7 +42,17 @@ This is how how the UI looks like
 
 ###### Add Book
 
-`mutation{   createBook(book:{title:"name",author:"author",price:123}){     _id     title     author     price   } }`
+```
+mutation{
+  createBook(book:{title:"name",author:"author",price:123}){
+    _id
+    title
+    author
+    price
+  }
+}
+
+```
 
 ###### List Books
 
