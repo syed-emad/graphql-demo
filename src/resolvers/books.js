@@ -19,10 +19,7 @@ const books = {
     console.log("payload", payload);
     const bookSchema = new Book(payload);
     const response = await bookSchema.save();
-    return {
-      ...response._doc,
-      _id: response.id,
-    };
+    return response;
   },
   updateBook: async ({ book, id }) => {
     const response = await Book.findByIdAndUpdate(
@@ -31,6 +28,17 @@ const books = {
       { new: true }
     );
     return response;
+  },
+  deleteBook: async ({ id }) => {
+    try {
+      const deletedBook = await Book.findByIdAndDelete({ _id: id });
+      if (!deletedBook) {
+        return { message: "Book not found", success: false };
+      }
+      return { message: "Book deleted", success: true, deletedBook };
+    } catch (e) {
+      console.log("Error in deleteBook", e);
+    }
   },
 };
 module.exports = books;

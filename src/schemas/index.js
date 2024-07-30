@@ -18,9 +18,15 @@ const schema = buildSchema(`
         books:[Book!]!
     }
     
+    type DeleteResponse{
+     deletedBook: Book
+     success: Boolean
+     message: String
+    }
     type Mutation {
         createBook(book: BookInput): Book
         updateBook(book: BookInput, id: String!): Book
+        deleteBook(id:String): DeleteResponse
     }
   `);
 module.exports = schema;
