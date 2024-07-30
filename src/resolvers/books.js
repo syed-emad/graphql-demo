@@ -2,9 +2,7 @@ const Book = require("../models/Book");
 const books = {
   books: async () => {
     try {
-      let books = [
-        { _id: "123", title: "Something", author: "String", price: 124 },
-      ];
+      const books = await Book.find({});
       return books;
     } catch (err) {
       console.log("Error occured in books resolver");
