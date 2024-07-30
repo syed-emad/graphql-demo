@@ -11,11 +11,19 @@ const books = {
       throw err;
     }
   },
-  createBook: async (name) => {
+  createBook: async (args) => {
+    let { book } = args;
+    let payload = {
+      title: book.title,
+      price: book.price,
+      author: book.author,
+    };
+    console.log("payload", payload);
+    const bookSchema = new Book(payload);
+    const response = await bookSchema.save();
     return {
-      _id: "123",
-      title: "title",
-      price: 123,
+      ...response._doc,
+      _id: response.id,
     };
   },
 };

@@ -8,10 +8,10 @@ const schema = buildSchema(`
         price: Float!
     }
 
-    type BookInput {
-        title: String
+    input BookInput {
+        title: String!
         author: String
-        price: Float
+        price: Float!
     }
 
     type Query {
@@ -19,7 +19,7 @@ const schema = buildSchema(`
     }
     
     type Mutation {
-        createBook(name: String): Book
+        createBook(book: BookInput): Book
     }
   `);
 module.exports = schema;
