@@ -9,7 +9,7 @@
 
 ### Server Architecture
 
-![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/wajiz.pk/Downloads/NS%20Service%20Arhictect%20%281%29.png?version%3D1722373743693)
+![1722374634670](image/README/1722374634670.png)
 
 ### Setup Guide
 
