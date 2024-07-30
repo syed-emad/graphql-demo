@@ -24,5 +24,13 @@ const books = {
       _id: response.id,
     };
   },
+  updateBook: async ({ book, id }) => {
+    const response = await Book.findByIdAndUpdate(
+      { _id: id },
+      { $set: { ...book } },
+      { new: true }
+    );
+    return response;
+  },
 };
 module.exports = books;

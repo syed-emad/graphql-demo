@@ -9,9 +9,9 @@ const schema = buildSchema(`
     }
 
     input BookInput {
-        title: String!
+        title: String
         author: String
-        price: Float!
+        price: Float
     }
 
     type Query {
@@ -20,6 +20,7 @@ const schema = buildSchema(`
     
     type Mutation {
         createBook(book: BookInput): Book
+        updateBook(book: BookInput, id: String!): Book
     }
   `);
 module.exports = schema;
