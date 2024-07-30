@@ -1,3 +1,4 @@
+const Book = require("../models/Book");
 const books = {
   books: async () => {
     try {
@@ -10,6 +11,12 @@ const books = {
       throw err;
     }
   },
-  createBook: async (args, req) => {},
+  createBook: async (name) => {
+    return {
+      _id: "123",
+      title: "title",
+      price: 123,
+    };
+  },
 };
 module.exports = books;

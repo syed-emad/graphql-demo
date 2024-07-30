@@ -17,5 +17,9 @@ const schema = buildSchema(`
     type Query {
         books:[Book!]!
     }
+    
+    type Mutation {
+        createBook(name: String): Book
+    }
   `);
 module.exports = schema;
