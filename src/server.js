@@ -3,18 +3,15 @@ var { createHandler } = require("graphql-http/lib/use/express");
 var { buildSchema } = require("graphql");
 var { ruruHTML } = require("ruru/server");
 var app = express();
-var schema = buildSchema(`
-  type Query {
-    hello: String
-  }
-`);
+var schema = require("./schemas/index");
+var rootResolver = require("./resolvers/index");
 
 const root = {
-  hello() {
+  books() {
     return "Hello World";
   },
 };
-app.all("/graphql", createHandler({ schema: schema, rootValue: root }));
+app.all("/graphql", createHandler({ schema: schema, rootValue: rootResolver }));
 app.get("/", (_req, res) => {
   res.type("html");
   res.end(ruruHTML({ endpoint: "/graphql" }));
